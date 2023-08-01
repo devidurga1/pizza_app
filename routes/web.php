@@ -61,8 +61,11 @@ Route::get('/pizzas/{id}', function () {
 */
 // this route using controller
 Route::get('/pizzas',[PizzaController::class, 'index']);
+Route::get('/pizzas/create',[PizzaController::class, 'create']);
+Route::post('/pizzas',[PizzaController::class, 'store']); // this route use to send data into database
 Route::get('/pizzas/{id}',[PizzaController::class, 'show']);
-
+Route::delete('/pizzas/{id}',[PizzaController::class, 'destroy']);
+//Route::get('/pizzas/create',[PizzaController::class, 'create']);  this here is this override the  above route to solve this issue we place this route in the above the route 
 
 
 
