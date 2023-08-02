@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('pizzas', function (Blueprint $table) {
-            $table->dropColumn('price');
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('is_admin')->nullable();
+        
         });
     }
 
@@ -25,7 +26,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('pizzas', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }

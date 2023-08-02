@@ -9,11 +9,13 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+    
         <!-- Styles -->
 
         <!-- this link for path of external css file we add-->
              <link  href="/css/main.css" rel="stylesheet">
-    
+            
+            
     </head>
     <body>
 

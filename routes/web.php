@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\PizzaController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
 
 
 /*
@@ -68,5 +70,8 @@ Route::delete('/pizzas/{id}',[PizzaController::class, 'destroy']);
 //Route::get('/pizzas/create',[PizzaController::class, 'create']);  this here is this override the  above route to solve this issue we place this route in the above the route 
 
 
+
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
